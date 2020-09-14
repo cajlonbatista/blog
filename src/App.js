@@ -4,20 +4,21 @@ import {
 } from './styles';
 
 import LayoutSidBar from './components/Sidbar/Sidbar';
-import Feed from './pages/Feed/Feed';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 function App() {
   return (
-    <Layout>
-      <LayoutSidBar>
+    <BrowserRouter>
+      <Layout>
+        <LayoutSidBar>
+        </LayoutSidBar>
+        <Routes>
+        </Routes>
+        <div>
 
-      </LayoutSidBar>
-      <Feed>
-
-      </Feed>
-      <div>
-
-      </div>
-    </Layout>
+        </div>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

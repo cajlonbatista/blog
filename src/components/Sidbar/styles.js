@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const LayoutSidBar = styled.div`
-    background: #d9e4fc;
+    background: #181818;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #B5B5B5;
     height: 100vh;
-    border-right: 2px #6092ff solid;
+    border-right: 5px #333333 solid;
 `;
 export const Avatar = styled.div`
     display: flex;

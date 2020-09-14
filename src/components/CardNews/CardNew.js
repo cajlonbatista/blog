@@ -21,11 +21,11 @@ export default class CadNew extends PureComponent {
             <CardConteiner>
                 <HeaderCard>
                     <CardPaper style={{ background: color, color: "white" }}>{card}</CardPaper>
-                    <span>{new Date(publishedAt).toDateString()}</span>
+                    <span style={{color: 'white'}}>{new Date(publishedAt).toDateString()}</span>
                 </HeaderCard>
                 <ContentCard>
                     <h2>{title}</h2>
-                    <p>{description}</p>
+                    <p style={{color: "#F5F5F5"}}>{description}</p>
                 </ContentCard>
             </CardConteiner>
         );

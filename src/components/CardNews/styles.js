@@ -18,24 +18,21 @@ export const HeaderCard = styled.div`
     }
 `;
 export const CardConteiner = styled.div`
-    background: white;
+    background: #202020;
     padding: 20px;
-    border: 1px solid #6092FF;
+    border: 1px solid #333333;
     transition: all 0.4s;
     cursor: pointer;
     :hover{
-        opacity: 0.6;
+        opacity: 0.87;
     }
 `;
 export const ContentCard = styled.div`
     padding: 10px;
     h2{
-        
-        
-        
         font-family: Exo, sans-serif;
         padding-bottom: 10px;
-        color: #6092FF;
+        color: #f2a129;
     }
     p{
         font-family: Noto Sans, sans-serif;
