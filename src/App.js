@@ -1,11 +1,21 @@
 import React from 'react';
-import './App.css';
+import {
+  Layout
+} from "./styles";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Layout>
+      <div style={{background: 'red'}}>
+
+      </div>
+      <div style={{background: 'green'}}>
+
+      </div>
+      <div style={{background: 'yellow'}}>
+
+      </div>
+    </Layout>
   );
 }
 
