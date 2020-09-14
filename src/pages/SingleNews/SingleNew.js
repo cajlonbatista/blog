@@ -43,7 +43,7 @@ export default class SingleNews extends Component {
                 <ConteinerNews>
                     <HeaderNews>
                         <Link to="">
-                            <svg version="1.1" id="back" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                            <svg version="1.1" id="back" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                             width="30" height="30" viewBox="0 0 511.63 511.631" >
 
                             <path d="M496.5,233.842c-30.841-76.706-114.112-115.06-249.823-115.06h-63.953V45.693c0-4.952-1.809-9.235-5.424-12.85

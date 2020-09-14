@@ -8,6 +8,7 @@ import CardNew from '../../components/CardNews/CardNew';
 import {
     BlockReserveLoading
 } from "react-loadingg";
+import { Link } from 'react-router-dom';
 
 export default class Feed extends Component {
     state = {
@@ -36,9 +37,9 @@ export default class Feed extends Component {
                 <LayoutNews>
                     {
                         this.state.data.map(article => (
-                            <a href={`/article/${article._id}`}>
+                            <Link to={`/article/${article._id}`}>
                                 <CardNew data={article}></CardNew>
-                            </a>
+                            </Link>
                         ))
                     }
                 </LayoutNews>
