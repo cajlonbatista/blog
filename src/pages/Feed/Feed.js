@@ -5,30 +5,44 @@ import {
 } from './styles';
 import axios from 'axios';
 import CardNew from '../../components/CardNews/CardNew';
-export default class Feed extends Component{
+import {
+    BlockReserveLoading
+} from "react-loadingg";
+
+export default class Feed extends Component {
     state = {
-        data: []
+        data: [],
+        loading: true,
     }
-    componentDidMount(){
+    componentDidMount() {
         axios.get('https://cajlon.herokuapp.com/api/articles')
-        .then(res => {
-            this.setState({
-                data: res.data.docs,
+            .then(res => {
+                this.setState({
+                    data: res.data.docs,
+                    loading: false,
+                })
+                console.log(res.data);
             })
-            console.log(res.data);
-        })
     }
-    render(){
-        return(
-            <LayoutNews>
-                {
-                    this.state.data.map(article => (
-                        <a href={`/article/${article._id}`}>
-                            <CardNew data={article}></CardNew>
-                        </a>
-                    ))
-                }
-            </LayoutNews>
-        );
+    render() {
+        if (this.state.loading == true) {
+            return (
+                <div style={{background: "#181818", height: "100vh"}}>
+                    <BlockReserveLoading/>
+                </div>
+            );
+        } else {
+            return (
+                <LayoutNews>
+                    {
+                        this.state.data.map(article => (
+                            <a href={`/article/${article._id}`}>
+                                <CardNew data={article}></CardNew>
+                            </a>
+                        ))
+                    }
+                </LayoutNews>
+            );
+        }
     }
 }

@@ -4,21 +4,23 @@ import {
 } from './styles';
 
 import LayoutSidBar from './components/Sidbar/Sidbar';
-import { BrowserRouter } from 'react-router-dom';
-import Routes from './routes';
+import { BrowserRouter as Router,Route , useRouteMatch } from 'react-router-dom';
+import Double from './components/Double/Double';
+import Feed from "./pages/Feed/Feed";
+import SingleNews from './pages/SingleNews/SingleNew';
 function App() {
   return (
-    <BrowserRouter>
-      <Layout>
+    <Router>
+      <Layout >
         <LayoutSidBar>
         </LayoutSidBar>
-        <Routes>
-        </Routes>
-        <div>
-
-        </div>
+        <Route path="/" component={Feed} exact></Route>
+        <Route path="/article/:_id" component={SingleNews} exact></Route>
+        <Route path="*"></Route>
+        <Double>
+        </Double>
       </Layout>
-    </BrowserRouter>
+    </Router>
   );
 }
 

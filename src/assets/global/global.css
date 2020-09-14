@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Exo&family=Noto+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -8,14 +10,15 @@ a{
     text-decoration: none;
 }
 ::-webkit-scrollbar-track {
-    background-color: #F4F4F4;
+    background-color: #181818;
 }
 ::-webkit-scrollbar {
-    width: 6px;
-    background: #F4F4F4;
+    width: 5px;
+    background: #ff6868;
 }
 ::-webkit-scrollbar-thumb {
-    background: #dad7d7;
+    background: #D18328;
+    border-radius: 5px;
 }
 #facebook{
     transition: all 0.4s;
@@ -40,4 +43,8 @@ a{
 }
 #linkedin:hover{
     fill: #6092ff;
+}
+#back:hover{
+    transition: all 0.4s;
+    fill: orangered;
 }

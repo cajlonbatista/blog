@@ -6,15 +6,18 @@ import {
     Contact
 } from './styles';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default class SidBar extends Component {
+   
+    componentDidMount(){
+        
+    }
     render() {
         return (
             <LayoutSidBar>
                 <Avatar>
-                    <div>
-                    </div>
+                    <div></div>
                     <span style={{ fontSize: 20, fontWeight: "500" }}>Francisco Cajlon</span>
                     <span>Desenvolvedor FullStack JavaScript</span>
                 </Avatar>
