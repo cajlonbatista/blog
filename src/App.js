@@ -4,16 +4,16 @@ import {
 } from './styles';
 
 import LayoutSidBar from './components/Sidbar/Sidbar';
-
+import Feed from './pages/Feed/Feed';
 function App() {
   return (
     <Layout>
       <LayoutSidBar>
 
       </LayoutSidBar>
-      <div>
+      <Feed>
 
-      </div>
+      </Feed>
       <div>
 
       </div>
