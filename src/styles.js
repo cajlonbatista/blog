@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Layout = styled.div`
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    div{
+    grid-template-columns: 2fr 6fr;
+    @media(max-width: 905px){
+        display: flex;
+        flex-direction: column-reverse;
     }
 `;

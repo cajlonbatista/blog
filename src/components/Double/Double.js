@@ -9,8 +9,11 @@ export default class Double extends Component {
     render() {
         return (
             <DoubleConteiner>
+                <Toggle>
+                    <img></img>
+                </Toggle>
                 <Dualdor>
-                    <span>A definição de insanidade é fazer a mesma coisa repetidamente e esperar resultados diferentes.</span>
+                    <span>Francisco Cajlon</span>
                 </Dualdor>
             </DoubleConteiner>
         );

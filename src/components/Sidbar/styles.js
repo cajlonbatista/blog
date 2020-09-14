@@ -8,6 +8,9 @@ export const LayoutSidBar = styled.div`
     color: #B5B5B5;
     height: 100vh;
     border-right: 5px #333333 solid;
+    @media(max-width: 905px){
+        display: none;
+    }
 `;
 export const Avatar = styled.div`
     display: flex;
@@ -21,6 +24,14 @@ export const Avatar = styled.div`
         background: url("https://c4.wallpaperflare.com/wallpaper/793/126/441/one-piece-monkey-d-luffy-sabo-portgas-d-ace-wallpaper-preview.jpg");
         overflow: hidden;
         position: relative;
+        @media(max-width: 905px){
+            width: 100px;
+            height: 100px;
+            background-position: 30px;
+        }
+    }
+    @media(max-width: 905px){
+        display: flex;
     }
     span{
         font-family: Exo, sans-serif;

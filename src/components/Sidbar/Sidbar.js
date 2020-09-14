@@ -20,6 +20,7 @@ export default class SidBar extends Component {
                     <div></div>
                     <span style={{ fontSize: 20, fontWeight: "500" }}>Francisco Cajlon</span>
                     <span>Desenvolvedor FullStack JavaScript</span>
+                    <span style={{fontSize: 15, padding: 10}}>A definição de insanidade é fazer a mesma coisa repetidamente e esperar resultados diferentes.</span>
                 </Avatar>
                 <Contact>
                     <div>
