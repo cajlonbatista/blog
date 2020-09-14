@@ -1,5 +1,12 @@
 import React, { PureComponent } from "react";
 
+import {
+    CardPaper,
+    HeaderCard,
+    CardConteiner,
+    ContentCard
+} from './styles';
+
 export default class CadNew extends PureComponent {
     render() {
         const {
@@ -11,16 +18,16 @@ export default class CadNew extends PureComponent {
             publishedAt,
         } = this.props.data;
         return (
-            <div>
-                <div>
-                    <span style={{ background: color, color: "white" }}>{card}</span>
-                    <span>{publishedAt}</span>
-                </div>
-                <div>
-                    <h4>{title}</h4>
+            <CardConteiner>
+                <HeaderCard>
+                    <CardPaper style={{ background: color, color: "white" }}>{card}</CardPaper>
+                    <span>{new Date(publishedAt).toDateString()}</span>
+                </HeaderCard>
+                <ContentCard>
+                    <h2>{title}</h2>
                     <p>{description}</p>
-                </div>
-            </div>
+                </ContentCard>
+            </CardConteiner>
         );
     }
 }

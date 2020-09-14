@@ -5,7 +5,6 @@ import {
 } from './styles';
 import axios from 'axios';
 import CardNew from '../../components/CardNews/CardNew';
-
 export default class Feed extends Component{
     state = {
         data: []
@@ -24,7 +23,9 @@ export default class Feed extends Component{
             <LayoutNews>
                 {
                     this.state.data.map(article => (
-                        <CardNew data={article}></CardNew>
+                        <a href={`/article/${article._id}`}>
+                            <CardNew data={article}></CardNew>
+                        </a>
                     ))
                 }
             </LayoutNews>

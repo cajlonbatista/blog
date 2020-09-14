@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Exo&family=Noto+Sans&family=Roboto&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+a{
+    text-decoration: none;
 }
 #facebook{
     transition: all 0.4s;
