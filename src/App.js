@@ -1,18 +1,20 @@
 import React from 'react';
 import {
   Layout
-} from "./styles";
+} from './styles';
+
+import LayoutSidBar from './components/Sidbar/Sidbar';
 
 function App() {
   return (
     <Layout>
-      <div style={{background: 'red'}}>
+      <LayoutSidBar>
+
+      </LayoutSidBar>
+      <div>
 
       </div>
-      <div style={{background: 'green'}}>
-
-      </div>
-      <div style={{background: 'yellow'}}>
+      <div>
 
       </div>
     </Layout>

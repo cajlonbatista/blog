@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+#facebook{
+    transition: all 0.4s;
+}
+#facebook:hover{
+    fill: #6092ff;
+}
+#instagram{
+    transition: all 0.4s;
+}
+#instagram:hover{
+    fill: #6092ff;
+}
+#github{
+    transition: all 0.4s;
+}
+#github:hover{
+    fill: #6092ff;
+}
+#linkedin{
+    transition: all 0.4s;
+}
+#linkedin:hover{
+    fill: #6092ff;
 }
