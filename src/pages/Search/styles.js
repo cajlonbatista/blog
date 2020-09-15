@@ -14,6 +14,7 @@ export const Entry = styled.div`
     background: #B2B2B2;
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 `;
 export const Exit = styled.div`
     display: grid;
