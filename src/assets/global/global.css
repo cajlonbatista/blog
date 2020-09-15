@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Exo&family=Noto+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import '~antd/dist/antd.css';
 *{
     box-sizing: border-box;
     padding: 0;
@@ -17,16 +17,18 @@ a{
         filter: saturate(8);
     }
 }
-::-webkit-scrollbar-track {
-    background-color: #181818;
-}
-::-webkit-scrollbar {
-    width: 5px;
-    background: #ff6868;
-}
-::-webkit-scrollbar-thumb {
-    background: #D18328;
-    border-radius: 5px;
+@media(min-width: 905px){
+    ::-webkit-scrollbar-track {
+        background-color: #181818;
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+        background: #ff6868;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #D18328;
+        border-radius: 5px;
+    }
 }
 #facebook{
     transition: all 0.4s;

@@ -15,8 +15,31 @@ export const ConteinerNews = styled.div`
     }
     @media(max-width: 905px){
         height: 100vh;
+        padding-top: 80px;
     }
 `;
+export const NotConteiner = styled.div`
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 100%;
+        max-width: 260px;
+        animation: lubu 4s inifinite;
+    }
+    h1{
+        font-family: Exo, sans-serif;
+        font-size: 44px;
+        margin-top: 200px;
+        color: #B5B5B5;
+        background: url(https://media4.giphy.com/media/dAWZiSMbMvObDWP3aA/giphy.gif) no-repeat;
+        -webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+        text-align: center;
+    }
+`;
+
 export const HeaderNews = styled.div`
     display: flex;
     background: #202020;
@@ -29,49 +52,61 @@ export const HeaderNews = styled.div`
         color: whitesmoke;
         font-size: 17px;
     }
-    @media(max-width: 905px){
-        margin-top: 80px;
-    }
 `;
 export const ContentNews = styled.div`
     padding: 10px;
-    display: flex;
     margin-top: 20px;
-    flex-direction: column;
+
     h1{
         font-family: Archivo, sans-serif;
         color: #ff712b;
         text-align: center;
+        margin-bottom: 20px;
+        padding: 5px;
+        border-bottom: 2px #ff712b solid;
     }
     h2{
         font-family: Archivo, sans-serif;
-        color: #ff712b;
+        color: #B5B5B5;
+        margin: 20px;
     }
     h3{
         font-family: Archivo, sans-serif;
-        color: #ff712b;
+        color: #B5B5B5;
+        margin: 20px;
+
     }
     h4{
-        font-family: Archivo, sans-serif;
-        color: #ff712b;
+        font-family: Poppins, sans-serif;
+        color: #B5B5B5;
+        font-size: 23px;
+        margin: 20px;
     }
     h5{
         font-family: Archivo, sans-serif;
-        color: #ff712b;
+        color: #B5B5B5;
+        margin: 20px;
     }
     h6{
         font-family: Archivo, sans-serif;
-        color: #ff712b;
+        color: #B5B5B5;
+        margin: 20px;
     }
     p{
         color: whitesmoke;
         font-family: Exo, sans-serif;
         font-size: 17px;
         text-align: justify;
+        margin: 20px;
     }
     img{
         width: 100%;
         max-width: 300px;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto
     }
 
 `
+

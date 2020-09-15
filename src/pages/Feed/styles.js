@@ -12,7 +12,7 @@ export const LayoutNews = styled.div`
     grid-gap: 10px;
     animation: bounce 2s linear;
     @media(max-width: 905px){
-        margin-top: 74px;
+        padding-top: 74px;
         overflow: hidden;
         height: 100vh;
     };
