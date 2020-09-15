@@ -9,12 +9,12 @@
 a{
     text-decoration: none;
 }
-@keyframes lubu{
+@keyframes bounce{
     0%{
-        filter: saturate(8);
+        opacity: 0.9;
     }
     100%{
-        filter: saturate(8);
+        opacity: 1;
     }
 }
 @media(min-width: 905px){

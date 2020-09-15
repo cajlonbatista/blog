@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const LayoutNews = styled.div`
     display: grid;
     background-size: cover;
+    animation: bounce 0.5s;
     display: grid;
     height: 100vh;
     background: #202020;

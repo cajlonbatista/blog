@@ -71,7 +71,4 @@ export const ItemHover = styled.div`
     width: 100%;
     height: 100%;
     border-bottom: 2px transparent solid;
-    :hover{
-        border-bottom: 2px #94cbfa solid;
-    }
 `;

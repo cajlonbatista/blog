@@ -11,7 +11,6 @@ import java from "../../assets/icons/java.svg";
 import python from "../../assets/icons/python.svg";
 import react from "../../assets/icons/react.svg";
 import nodejs from "../../assets/icons/nodejs.svg";
-import material from "../../assets/icons/material.svg";
 import git from "../../assets/icons/git.svg";
 import github from "../../assets/icons/github.svg";
 import js from "../../assets/icons/js.svg";
