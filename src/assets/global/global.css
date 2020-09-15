@@ -36,7 +36,10 @@ a{
 #facebook:hover{
     fill: #6092ff;
     animation: graps 0.5s linear;
-
+}
+#close:hover{
+    fill: #6092ff;
+    animation: spin 1s linear;
 }
 #instagram{
     transition: all 0.4s;
@@ -77,6 +80,7 @@ a{
     fill: #ff7948;
     animation: graps 0.5s linear;
 }
+
 @keyframes graps {
     0% {
       -webkit-transform: scale3d(1, 1, 1);
@@ -107,3 +111,8 @@ a{
               transform: scale3d(1, 1, 1);
     }
   }
+@keyframes spin{
+    0%{
+        transform: rotate(360deg);
+    }
+}

@@ -21,6 +21,7 @@ export default class Search extends Component {
         data: [],
         search: "",
         loading: false,
+        status: 'none'
     }
     onSearch = () => {
         if (this.state.search == "") {
@@ -33,6 +34,10 @@ export default class Search extends Component {
                     })
                     if (res.data.length == 0) {
                         message.info("Não encontramos nada. Tente palavras chave");
+                    }else{
+                        this.setState({
+                            status: "block",
+                        })
                     }
                 })
         }
@@ -54,6 +59,11 @@ export default class Search extends Component {
                                         await this.setState({
                                             data: res.data,
                                         })
+                                        if(res.data.length != 0){
+                                            this.setState({ 
+                                                status: "block"
+                                            })
+                                        }
                                     })
                             }}
                             inputProps={{ 'aria-label': 'search google maps' }}
@@ -62,6 +72,17 @@ export default class Search extends Component {
                             <SearchIcon onClick={this.onSearch} />
                         </IconButton>
                     </Entry>
+                    <div style={{display: this.state.status, marginBottom: 20, padding: 20 ,display: "flex", justifyContent: "flex-end", color: "white", fontFamily: "Exo, sans-serif", fontSize: 13}}>
+                            {
+                                (this.state.data.length == 0)
+                                ?
+                                <div></div>
+                                :
+                                <div>
+                                    {this.state.data.length} resultados encontrados
+                                </div>
+                            }
+                    </div>
                     <Exit>
                         {
                             this.state.data.map(article => {

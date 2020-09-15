@@ -74,7 +74,7 @@ export default class Double extends Component {
                     <span>Francisco Cajlon 😀</span>
                 </Dualdor>
                 <SwipeableDrawer anchor="left" open={this.state.open} onOpen={this.handleDrawerOpen} onClose={this.handleDrawerClose}>
-                    <List style={{ background: "#202020", position: "relative", height: "100vh"}}>
+                    <List style={{ background: "#202020", position: "relative", height: "100vh", width: "100%" ,display: "flex", flexDirection: "column" ,justifyContent: "space-between"}}>
                         <IconButton style={{position: "absolute"}} onClick={this.handleDrawerClose}>
                             <img src={close} align="right" width="24px" alt="" />
                         </IconButton>
