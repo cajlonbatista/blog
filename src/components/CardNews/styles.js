@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CardPaper = styled.div`
     padding: 10px 20px;
     border-radius: 5px;
-    width: 70px;
     display: flex;
     justify-content: center;
     font-family: Roboto, sans-serif;
@@ -12,6 +11,9 @@ export const HeaderCard = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 5px;
+    border-bottom: 2px solid #B5B5B5;
+    margin-bottom: 20px;
     span{
         font-family: Archivo, sans-serif;
         font-size: 14px;

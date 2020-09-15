@@ -31,7 +31,7 @@ export default class SingleNews extends Component {
             })
     }
     render() {
-        const { author, publishedAt, title, description, card, color } = this.state.data;
+        const { author, publishedAt, title, description,content ,card, color } = this.state.data;
         if (this.state.loading) {
             return (
                 <div style={{ background: "#202020", height: "100vh" }}>
@@ -61,9 +61,8 @@ export default class SingleNews extends Component {
                         <span style={{background: color, padding: "7px 20px", borderRadius: 5}}>{card}</span>
                         <span>{new Date(publishedAt).toDateString()}</span>
                     </HeaderNews>
-                    <h3>{title}</h3>
                     <ContentNews>
-                        <Markdown source={description}></Markdown>
+                        <Markdown source={content}></Markdown>
                     </ContentNews>
                 </ConteinerNews >
             );

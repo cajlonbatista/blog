@@ -14,7 +14,7 @@ export const LayoutNews = styled.div`
     @media(max-width: 905px){
         margin-top: 74px;
         overflow: hidden;
-        height: auto;
+        height: 100vh;
     };
 `;
 
