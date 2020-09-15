@@ -18,6 +18,7 @@ import ListItem from '@material-ui/core/ListItem';
 import menu from "../../assets/icons/menu.svg";
 import close from "../../assets/icons/close.svg";
 
+
 export default class Double extends Component {
     state = {
         anchor: null,
@@ -64,7 +65,7 @@ export default class Double extends Component {
         ]
         return (
             <DoubleConteiner>
-                <Toggle>
+                <Toggle >
                     <IconButton onClick={this.handleDrawerOpen}>
                         <img src={menu} width="20"></img>
                     </IconButton>
@@ -73,8 +74,8 @@ export default class Double extends Component {
                     <span>Francisco Cajlon 😀</span>
                 </Dualdor>
                 <SwipeableDrawer anchor="left" open={this.state.open} onOpen={this.handleDrawerOpen} onClose={this.handleDrawerClose}>
-                    <List style={{ background: "#202020", height: "100vh", width: "100%" }}>
-                        <IconButton onClick={this.handleDrawerClose}>
+                    <List style={{ background: "#202020", position: "relative", height: "100vh"}}>
+                        <IconButton style={{position: "absolute"}} onClick={this.handleDrawerClose}>
                             <img src={close} align="right" width="24px" alt="" />
                         </IconButton>
                         <Avatar>

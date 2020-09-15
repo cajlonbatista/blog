@@ -10,6 +10,7 @@ import {
     BlockReserveLoading
 } from "react-loadingg";
 import { Link } from 'react-router-dom';
+import { BackTop } from "antd";
 
 export default class Feed extends Component {
     state = {
@@ -34,7 +35,7 @@ export default class Feed extends Component {
             );
         } else {
             if (this.state.data.total == "0") {
-                return(
+                return (
                     <NotFound>
                         <img src="http://pngimg.com/uploads/simpsons/simpsons_PNG84.png" width="300px"></img>
                         <h2>Não esquenta, em breve teremos algo aqui !</h2>
@@ -42,15 +43,18 @@ export default class Feed extends Component {
                 );
             } else {
                 return (
-                    <LayoutNews>
-                        {
-                            this.state.data.docs.map(article => (
-                                <Link to={`/article/${article._id}`} key={article._id}>
-                                    <CardNew data={article}></CardNew>
-                                </Link>
-                            ))
-                        }
-                    </LayoutNews>
+                    <>
+                        <BackTop />
+                        <LayoutNews>
+                            {
+                                this.state.data.docs.map(article => (
+                                    <Link to={`/article/${article._id}`} key={article._id}>
+                                        <CardNew data={article}></CardNew>
+                                    </Link>
+                                ))
+                            }
+                        </LayoutNews>
+                    </>
                 );
             }
         }

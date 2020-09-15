@@ -14,6 +14,7 @@ import CardNew from '../../components/CardNews/CardNew';
 import axios from 'axios';
 import { message } from 'antd';
 import { Link } from 'react-router-dom';
+import { BackTop } from "antd";
 
 export default class Search extends Component {
     state = {
@@ -30,7 +31,7 @@ export default class Search extends Component {
                     await this.setState({
                         data: res.data,
                     })
-                    if(res.data.length == 0){
+                    if (res.data.length == 0) {
                         message.info("Não encontramos nada. Tente palavras chave");
                     }
                 })
@@ -38,33 +39,42 @@ export default class Search extends Component {
     }
     render() {
         return (
-            <SearchConteiner>
-                <Entry>
-                    <InputBase
-                        placeholder="Procure um artigo"
-                        onChange={async (e) => {
-                            await this.setState({
-                                search: e.target.value
+            <>
+                <BackTop />
+                <SearchConteiner>
+                    <Entry>
+                        <InputBase
+                            placeholder="Procure um artigo"
+                            onChange={async (e) => {
+                                await this.setState({
+                                    search: e.target.value
+                                })
+                                axios.get(`https://cajlon.herokuapp.com/api/search/${this.state.search}`)
+                                    .then(async res => {
+                                        await this.setState({
+                                            data: res.data,
+                                        })
+                                    })
+                            }}
+                            inputProps={{ 'aria-label': 'search google maps' }}
+                        />
+                        <IconButton aria-label="search">
+                            <SearchIcon onClick={this.onSearch} />
+                        </IconButton>
+                    </Entry>
+                    <Exit>
+                        {
+                            this.state.data.map(article => {
+                                return (
+                                    <Link to={`/article/${article._id}`} key={article._id}>
+                                        <CardNew data={article}></CardNew>
+                                    </Link>
+                                );
                             })
-                        }}
-                        inputProps={{ 'aria-label': 'search google maps' }}
-                    />
-                    <IconButton aria-label="search">
-                        <SearchIcon onClick={this.onSearch} />
-                    </IconButton>
-                </Entry>
-                <Exit>
-                    {
-                        this.state.data.map(article => {
-                            return(
-                                <Link to={`/article/${article._id}`} key={article._id}>
-                                    <CardNew data={article}></CardNew>
-                                </Link>
-                            );
-                        })
-                    }
-                </Exit>
-            </SearchConteiner>
+                        }
+                    </Exit>
+                </SearchConteiner>
+            </>
         );
     }
 }
