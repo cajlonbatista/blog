@@ -25,6 +25,7 @@ export const CardConteiner = styled.div`
     cursor: pointer;
     :hover{
         opacity: 0.87;
+        border: 1px solid #D8922A;
     }
 `;
 export const ContentCard = styled.div`

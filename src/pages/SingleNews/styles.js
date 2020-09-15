@@ -11,6 +11,10 @@ export const ConteinerNews = styled.div`
         text-align: center;
         font-family: Poppins, sans-serif;
     }
+    @media(max-width: 905px){
+        margin-top: 74px;
+        height: 100vh;
+    }
 `;
 export const HeaderNews = styled.div`
     display: flex;
