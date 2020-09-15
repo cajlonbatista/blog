@@ -9,9 +9,9 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 
 export default class SidBar extends Component {
-   
-    componentDidMount(){
-        
+
+    componentDidMount() {
+
     }
     render() {
         return (
@@ -20,12 +20,12 @@ export default class SidBar extends Component {
                     <div></div>
                     <span style={{ fontSize: 20, fontWeight: "500" }}>Francisco Cajlon</span>
                     <span>Desenvolvedor FullStack JavaScript</span>
-                    <span style={{fontSize: 15, padding: 10}}>A definição de insanidade é fazer a mesma coisa repetidamente e esperar resultados diferentes.</span>
+                    <span style={{ fontSize: 15, padding: 10 }}>A definição de insanidade é fazer a mesma coisa repetidamente e esperar resultados diferentes.</span>
                 </Avatar>
                 <Contact>
                     <div>
                         <a href="https://github.com/cajlonbatista" target="_blank">
-                            <svg id="github"  height="30"  fill="#B5B5B5" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="github" height="30" fill="#B5B5B5" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z" />
                             </svg>
                         </a>
@@ -37,7 +37,7 @@ export default class SidBar extends Component {
                             </svg>
                         </a>
                         <a href="https://www.facebook.com/franciscocajlon.jhonanthanmourabatista" target="_blank">
-                            <svg id="facebook"  height="30" fill="#B5B5B5" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="facebook" height="30" fill="#B5B5B5" viewBox="0 0 512 512" width="30" xmlns="http://www.w3.org/2000/svg">
                                 <path d="m512 256c0-141.4-114.6-256-256-256s-256 114.6-256 256 114.6 256 256 256c1.5 0 3 0 4.5-.1v-199.2h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5c107-30.7 185.3-129.2 185.3-246.1z" />
                             </svg>
                         </a>
@@ -49,9 +49,30 @@ export default class SidBar extends Component {
                     </div>
                 </Contact>
                 <Links>
-                    <Link style={{color: "#b5b5b5", marginTop: 10}} to="/"><span>Home</span></Link>
-                    <Link style={{color: "#b5b5b5", marginTop: 10}} to="/about"><span>Sobre Mim</span></Link>
-                    <Link style={{color: "#b5b5b5", marginTop: 10}} to="/skills"><span>Skills</span></Link>
+                    <Link style={{ color: "#b5b5b5", marginTop: 10 }} to="/"><span>Home</span></Link>
+                    <Link style={{ color: "#b5b5b5", marginTop: 10 }} to="/about"><span>Sobre Mim</span></Link>
+                    <Link style={{ color: "#b5b5b5", marginTop: 10 }} to="/skills"><span>Skills</span></Link>
+                    <Link style={{ color: "#b5b5b5", marginTop: 10 }} to="/search">
+                        <svg version="1.1" fill="#B5B5B5" id="search" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                            width="40" height="40" viewBox="0 0 310.42 310.42"
+                        >
+                            <g>
+                                <g>
+                                    <path d="M273.587,214.965c49.11-49.111,49.109-129.021,0-178.132c-49.111-49.111-129.02-49.111-178.13,0
+                                    C53.793,78.497,47.483,140.462,76.51,188.85c0,0,2.085,3.498-0.731,6.312c-16.065,16.064-64.263,64.263-64.263,64.263
+                                    c-12.791,12.79-15.836,30.675-4.493,42.02l1.953,1.951c11.343,11.345,29.229,8.301,42.019-4.49c0,0,48.096-48.097,64.128-64.128
+                                    c2.951-2.951,6.448-0.866,6.448-0.866C169.958,262.938,231.923,256.629,273.587,214.965z M118.711,191.71
+                                    c-36.288-36.288-36.287-95.332,0.001-131.62c36.288-36.287,95.332-36.288,131.619,0c36.288,36.287,36.288,95.332,0,131.62
+                                    C214.043,227.996,155,227.996,118.711,191.71z"/>
+                                    <g>
+                                        <path d="M126.75,118.424c-1.689,0-3.406-0.332-5.061-1.031c-6.611-2.798-9.704-10.426-6.906-17.038
+                                        c17.586-41.559,65.703-61.062,107.261-43.476c6.611,2.798,9.704,10.426,6.906,17.038c-2.799,6.612-10.425,9.703-17.039,6.906
+                                        c-28.354-11.998-61.186,1.309-73.183,29.663C136.629,115.445,131.815,118.424,126.75,118.424z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </Link>
                 </Links>
             </LayoutSidBar>
         );

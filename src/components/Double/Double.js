@@ -4,8 +4,9 @@ import {
     DoubleConteiner,
     Dualdor,
     Toggle,
-    Avatar, 
-    Contact
+    Avatar,
+    Contact,
+    ItemHover
 } from './styles';
 import { Link } from "react-router-dom";
 
@@ -56,6 +57,10 @@ export default class Double extends Component {
                 path: "/skills",
                 title: "Skills"
             },
+            {
+                path: "/search",
+                title: "Pesquisar"
+            }
         ]
         return (
             <DoubleConteiner>
@@ -81,10 +86,12 @@ export default class Double extends Component {
                         <div>
                             {
                                 items.map((item) => (
-                                    <ListItem className="list" onClick={this.handleDrawerClose} button >
-                                        <Link to={item.path} style={{ color: "#94cbfa", fontFamily: "Exo, sans-serif", fontWeight: "600", fontSize: "18px" }}>
-                                            {item.title}
-                                        </Link>
+                                    <ListItem key={item.path} onClick={this.handleDrawerClose} button >
+                                        <ItemHover>
+                                            <Link to={item.path} style={{ color: "#B5B5B5", fontFamily: "Exo, sans-serif", fontWeight: "600", fontSize: "18px" }}>
+                                                {item.title}
+                                            </Link>
+                                        </ItemHover>
                                     </ListItem>
                                 ))
                             }

@@ -9,6 +9,14 @@
 a{
     text-decoration: none;
 }
+@keyframes lubu{
+    0%{
+        filter: saturate(8);
+    }
+    100%{
+        filter: saturate(8);
+    }
+}
 ::-webkit-scrollbar-track {
     background-color: #181818;
 }
@@ -52,7 +60,17 @@ a{
     animation: graps 0.5s linear;
 
 }
+#back{
+    transition: all 0.4s;
+}
 #back:hover{
+    fill: #ff7948;
+    animation: graps 0.5s linear;
+}
+#search{
+    transition: all 0.4s;
+}
+#search:hover{
     transition: all 0.4s;
     fill: #ff7948;
     animation: graps 0.5s linear;

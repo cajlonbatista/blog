@@ -27,7 +27,7 @@ export const Toggle = styled.div`
     margin: 5px;
     display: flex;
 
-`; 
+`;
 export const Avatar = styled.div`
     display: flex;
     flex-direction: column;
@@ -65,5 +65,13 @@ export const Contact = styled.div`
     align-items: center;
     svg{
         margin: 5px;
+    }
+`;
+export const ItemHover = styled.div`
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px transparent solid;
+    :hover{
+        border-bottom: 2px #94cbfa solid;
     }
 `;

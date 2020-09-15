@@ -17,3 +17,23 @@ export const LayoutNews = styled.div`
         height: auto;
     };
 `;
+
+export const NotFound = styled.div`
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+    img{
+        width: 90%;
+        max-width: 450px;
+    }
+    h2{
+        color: #6092ff;
+        text-align: center;
+        font-family: Exo, sans-serif;
+    }
+
+`;

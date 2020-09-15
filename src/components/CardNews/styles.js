@@ -20,12 +20,12 @@ export const HeaderCard = styled.div`
 export const CardConteiner = styled.div`
     background: #202020;
     padding: 20px;
-    border: 1px solid #333333;
+    border: 2px solid #333333;
     transition: all 0.4s;
     cursor: pointer;
     :hover{
         opacity: 0.87;
-        border: 1px solid #D8922A;
+        border: 2px solid #94cbfa;
     }
 `;
 export const ContentCard = styled.div`

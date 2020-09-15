@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import {
-    LayoutNews
+    LayoutNews,
+    NotFound
 } from './styles';
 import axios from 'axios';
 import CardNew from '../../components/CardNews/CardNew';
@@ -19,31 +20,39 @@ export default class Feed extends Component {
         axios.get('https://cajlon.herokuapp.com/api/articles')
             .then(res => {
                 this.setState({
-                    data: res.data.docs,
+                    data: res.data,
                     loading: false,
                 })
-                console.log(res.data);
             })
     }
     render() {
         if (this.state.loading == true) {
             return (
-                <div style={{background: "#181818", height: "100vh"}}>
-                    <BlockReserveLoading/>
+                <div style={{ background: "#202020", height: "100vh" }}>
+                    <BlockReserveLoading />
                 </div>
             );
         } else {
-            return (
+            if (this.state.data.total == "0") {
+                return(
+                    <NotFound>
+                        <img src="http://pngimg.com/uploads/simpsons/simpsons_PNG84.png" width="300px"></img>
+                        <h2>Não esquenta, em breve teremos algo aqui !</h2>
+                    </NotFound>
+                );
+            } else {
+                return (
                     <LayoutNews>
                         {
-                            this.state.data.map(article => (
-                                <Link to={`/article/${article._id}`}>
+                            this.state.data.docs.map(article => (
+                                <Link to={`/article/${article._id}`} key={article._id}>
                                     <CardNew data={article}></CardNew>
                                 </Link>
                             ))
                         }
                     </LayoutNews>
-            );
+                );
+            }
         }
     }
 }
