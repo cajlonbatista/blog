@@ -1,3 +1,1 @@
-## My personal blog about web technologies
-
-## Guide 
+## My personal blog
