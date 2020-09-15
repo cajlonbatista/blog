@@ -34,15 +34,15 @@ export default class Feed extends Component {
             );
         } else {
             return (
-                <LayoutNews>
-                    {
-                        this.state.data.map(article => (
-                            <Link to={`/article/${article._id}`}>
-                                <CardNew data={article}></CardNew>
-                            </Link>
-                        ))
-                    }
-                </LayoutNews>
+                    <LayoutNews>
+                        {
+                            this.state.data.map(article => (
+                                <Link to={`/article/${article._id}`}>
+                                    <CardNew data={article}></CardNew>
+                                </Link>
+                            ))
+                        }
+                    </LayoutNews>
             );
         }
     }

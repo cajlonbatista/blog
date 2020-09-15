@@ -33,7 +33,7 @@ export const ContentCard = styled.div`
     h2{
         font-family: Exo, sans-serif;
         padding-bottom: 10px;
-        color: #f2a129;
+        color: #4c84b2;
     }
     p{
         font-family: Noto Sans, sans-serif;
