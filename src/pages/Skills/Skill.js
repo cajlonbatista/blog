@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import {
     SkillLayout,
-    SkillCard
+    SkillCard,
+    SoftCard
 } from "./styles";
 
 import java from "../../assets/icons/java.svg";
@@ -22,10 +23,11 @@ export default class Skill extends Component {
     render() {
         return (
             <SkillLayout>
-                <h1>Skills</h1>
+                <h3 style={{color: "#B5B5B5"}}>Skills</h3>
                 <Link to="about">
                     Visite o Sobre Mim
                 </Link>
+                <span>Hard Skills</span>
                 <SkillCard>
                     <div style={{position: "relative"}}>
                         <img src={react} width="46" style={{position: "absolute", bottom: "19px"}}></img>
@@ -65,6 +67,13 @@ export default class Skill extends Component {
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png" width="40" style={{position: "absolute", bottom: "19px"}}/>
                     </div>
                 </SkillCard>
+                <span>Soft Skills</span>
+                <SoftCard>
+                    <div>Adaptabilidade</div>
+                    <div>Trabalho em Equipe</div>
+                    <div>Novas Ideias</div>
+                    <div>Comunicação</div>
+                </SoftCard>
             </SkillLayout>
         )
     }
