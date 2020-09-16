@@ -22,6 +22,7 @@ export const Avatar = styled.div`
         margin: 10px;
         height: 170px;
         background: url("https://cdn.discordapp.com/avatars/736865755924004904/a_bc2f2e8db3953b1b584c2489b9d6c7d9.gif?size=128");
+        background-size: cover;
         overflow: hidden;
         position: relative;
         @media(max-width: 905px){
