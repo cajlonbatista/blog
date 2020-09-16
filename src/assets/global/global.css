@@ -9,27 +9,20 @@
 a{
     text-decoration: none;
 }
-@keyframes bounce{
-    0%{
-        opacity: 0.9;
-    }
-    100%{
-        opacity: 1;
-    }
-}
 @media(min-width: 905px){
     ::-webkit-scrollbar-track {
         background-color: #181818;
     }
     ::-webkit-scrollbar {
         width: 5px;
-        background: #ff6868;
+        background: #6092ff;
     }
     ::-webkit-scrollbar-thumb {
-        background: #D18328;
+        background: #6092ff;
         border-radius: 5px;
     }
 }
+
 #facebook{
     transition: all 0.4s;
 }
@@ -80,7 +73,15 @@ a{
     fill: #ff7948;
     animation: graps 0.5s linear;
 }
-
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 @keyframes graps {
     0% {
       -webkit-transform: scale3d(1, 1, 1);
@@ -116,3 +117,15 @@ a{
         transform: rotate(360deg);
     }
 }
+@keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+  }
+  
+  

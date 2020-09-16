@@ -7,4 +7,5 @@ export const Layout = styled.div`
         display: flex;
         flex-direction: column-reverse;
     }
+    background: #181818;
 `;

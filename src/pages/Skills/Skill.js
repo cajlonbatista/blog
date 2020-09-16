@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 import {
     SkillLayout,
@@ -17,63 +16,84 @@ import js from "../../assets/icons/js.svg";
 import html from "../../assets/icons/html.svg";
 import css from "../../assets/icons/css.svg";
 
+import {
+    TouchBallLoading
+ } from "react-loadingg";
 
 export default class Skill extends Component {
+    state = {
+        loading: true
+    }
+    componentDidMount() {
+        this.timeOut();
+    }
+    timeOut = () => {
+        setTimeout(() => {
+            this.setState({
+                loading: false
+            })
+        }, 2000);
+    }
     render() {
-        return (
-            <SkillLayout>
-                <h3 style={{color: "#B5B5B5"}}>Skills</h3>
-                <Link to="about">
-                    Visite o Sobre Mim
-                </Link>
-                <span>Hard Skills</span>
-                <SkillCard>
-                    <div style={{position: "relative"}}>
-                        <img src={react} width="46" style={{position: "absolute", bottom: "19px"}}></img>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={python} width="40" style={{position: "absolute", bottom: "19px"}}></img>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={java} width="40"></img>
+        if (this.state.loading) {
+            return(
+                <div style={{height: "100vh", background: "#202020" }}>
+                    <TouchBallLoading></TouchBallLoading>
+                </div>
+            );
+        } else {
+            return (
+                <SkillLayout>
+                    <h3 style={{ color: "#B5B5B5" }}>Skills</h3>
+                    <span>Hard Skills</span>
+                    <SkillCard>
+                        <div style={{ position: "relative" }}>
+                            <img src={react} width="46" style={{ position: "absolute", bottom: "19px" }}></img>
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={python} width="40" style={{ position: "absolute", bottom: "19px" }}></img>
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={java} width="40"></img>
 
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={nodejs} width="40" style={{position: "absolute", bottom: "19px"}}></img>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={github} width="40"></img>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={git} width="40" style={{position: "absolute", bottom: "19px"}}/>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={js} width="40" style={{position: "absolute", bottom: "19px"}}/>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={html} width="40" style={{position: "absolute", bottom: "12px"}}/>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src={css} width="40" style={{position: "absolute", bottom: "12px"}}/>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png" width="40" style={{position: "absolute", bottom: "17px"}}/>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src="https://seeklogo.com/images/M/material-design-logo-8BAFEFE50B-seeklogo.com.png" width="40" style={{position: "absolute", bottom: "19px"}}/>
-                    </div>
-                    <div style={{position: "relative"}}>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png" width="40" style={{position: "absolute", bottom: "19px"}}/>
-                    </div>
-                </SkillCard>
-                <span>Soft Skills</span>
-                <SoftCard>
-                    <div>Adaptabilidade</div>
-                    <div>Trabalho em Equipe</div>
-                    <div>Novas Ideias</div>
-                    <div>Comunicação</div>
-                </SoftCard>
-            </SkillLayout>
-        )
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={nodejs} width="40" style={{ position: "absolute", bottom: "19px" }}></img>
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={github} width="40"></img>
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={git} width="40" style={{ position: "absolute", bottom: "19px" }} />
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={js} width="40" style={{ position: "absolute", bottom: "19px" }} />
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={html} width="40" style={{ position: "absolute", bottom: "12px" }} />
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src={css} width="40" style={{ position: "absolute", bottom: "12px" }} />
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png" width="40" style={{ position: "absolute", bottom: "17px" }} />
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src="https://seeklogo.com/images/M/material-design-logo-8BAFEFE50B-seeklogo.com.png" width="40" style={{ position: "absolute", bottom: "19px" }} />
+                        </div>
+                        <div style={{ position: "relative" }}>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Electron_Software_Framework_Logo.svg/1024px-Electron_Software_Framework_Logo.svg.png" width="40" style={{ position: "absolute", bottom: "19px" }} />
+                        </div>
+                    </SkillCard>
+                    <span>Soft Skills</span>
+                    <SoftCard>
+                        <div>Adaptabilidade</div>
+                        <div>Trabalho em Equipe</div>
+                        <div>Novas Ideias</div>
+                        <div>Comunicação</div>
+                    </SoftCard>
+                </SkillLayout>
+            )
+        }
     }
 }

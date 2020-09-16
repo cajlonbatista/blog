@@ -10,7 +10,7 @@ import {
 } from "./styles";
 
 import {
-    EatLoading
+    SemipolarLoading
 } from "react-loadingg";
 import { Link } from "react-router-dom";
 import { BackTop } from "antd";
@@ -29,7 +29,6 @@ export default class SingleNews extends Component {
             .then(res => {
                 this.setState({
                     data: res.data,
-                    loading: false,
                 });
             }).catch(err => {
                 this.setState({
@@ -37,13 +36,21 @@ export default class SingleNews extends Component {
                     erro: true,
                 })
             })
+        this.timeOut();
+    }
+    timeOut = () => {
+        setTimeout(() => {
+            this.setState({
+                loading: false
+            })
+        }, 2000);
     }
     render() {
         const { author, publishedAt, title, description, content, card, color } = this.state.data;
         if (this.state.loading) {
             return (
                 <div style={{ background: "#202020", overflow: "hidden", height: "100vh" }}>
-                    <EatLoading></EatLoading>
+                    <SemipolarLoading></SemipolarLoading>
                 </div>
             );
         } else {
@@ -97,7 +104,6 @@ export default class SingleNews extends Component {
                                     C511.63,291.039,506.589,259.344,496.5,233.842z"/>
                                     </svg>
                                 </Link>
-                                <span style={{ background: color, padding: "7px 20px", borderRadius: 5 }}>{card}</span>
                                 <span>{new Date(publishedAt).toDateString()}</span>
                             </HeaderNews>
                             <ContentNews>

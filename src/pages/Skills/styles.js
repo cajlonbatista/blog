@@ -4,6 +4,7 @@ export const SkillLayout = styled.div`
     height: 100vh;
     background: #202020;
     padding: 20px;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -25,13 +26,12 @@ export const SkillLayout = styled.div`
     }
     span{
         font-family: Poppins, sans-serif;
-        border-bottom: 5px solid #b5b5b5;
-        font-size: 27px;
+        font-size: 20px;
         font-weight: 600;
-        color: #b5b5b5;
+        color: #6092ff;
     }
     @media(max-width: 905px){
-        padding-top: 75px;
+        padding-top: 79px;
     }
 `; 
 export const SkillCard = styled.div`
@@ -61,6 +61,6 @@ export const SoftCard = styled.div`
         color: #b5b5b5;
         transition: all 0.4s;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 17px;
     }
 `;

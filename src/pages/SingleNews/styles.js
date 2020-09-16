@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const ConteinerNews = styled.div`
     background: #202020;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     height: 100vh;
     overflow: auto;
     h3{
@@ -35,7 +36,7 @@ export const NotConteiner = styled.div`
         color: #B5B5B5;
         background: url(https://media4.giphy.com/media/dAWZiSMbMvObDWP3aA/giphy.gif) no-repeat;
         -webkit-background-clip: text;
--webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent; 
         text-align: center;
     }
 `;
@@ -59,11 +60,10 @@ export const ContentNews = styled.div`
 
     h1{
         font-family: Archivo, sans-serif;
-        color: #ff712b;
+        color: #B5B5B5;
         text-align: center;
         margin-bottom: 20px;
         padding: 5px;
-        border-bottom: 2px #ff712b solid;
     }
     h2{
         font-family: Archivo, sans-serif;
@@ -98,6 +98,9 @@ export const ContentNews = styled.div`
         font-size: 17px;
         text-align: justify;
         margin: 20px;
+        @media(max-width: 905px){
+            margin: 5px;
+        }
     }
     img{
         width: 100%;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import avatar from "../../assets/images/avatar.gif"
 export const LayoutSidBar = styled.div`
     background: #181818;
     display: flex;
@@ -21,7 +21,8 @@ export const Avatar = styled.div`
         width: 170px;
         margin: 10px;
         height: 170px;
-        background: url("https://c4.wallpaperflare.com/wallpaper/793/126/441/one-piece-monkey-d-luffy-sabo-portgas-d-ace-wallpaper-preview.jpg");
+        background: url(${avatar}) no-repeat;
+        background-size: cover;
         overflow: hidden;
         position: relative;
         @media(max-width: 905px){

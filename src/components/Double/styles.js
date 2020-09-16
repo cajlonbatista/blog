@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import avatar from "../../assets/images/avatar.gif"
 
 export const DoubleConteiner = styled.div`
     background: #181818;
@@ -37,7 +38,7 @@ export const Avatar = styled.div`
         width: 120px;
         margin: 10px;
         height: 120px;
-        background: url("https://c4.wallpaperflare.com/wallpaper/793/126/441/one-piece-monkey-d-luffy-sabo-portgas-d-ace-wallpaper-preview.jpg");
+        background: url(${avatar});
         overflow: hidden;
         position: relative;
         @media(max-width: 905px){
@@ -68,7 +69,10 @@ export const Contact = styled.div`
     }
 `;
 export const ItemHover = styled.div`
-    width: 100%;
-    height: 100%;
+transition: all 0.4s;
+    :hover{
+        opacity: 0.4;
+        color: #6092ff;
+    }
     border-bottom: 2px transparent solid;
 `;

@@ -74,8 +74,8 @@ export default class Double extends Component {
                     <span>Francisco Cajlon 😀</span>
                 </Dualdor>
                 <SwipeableDrawer anchor="left" open={this.state.open} onOpen={this.handleDrawerOpen} onClose={this.handleDrawerClose}>
-                    <List style={{ background: "#202020", position: "relative", height: "100vh", width: "100%" ,display: "flex", flexDirection: "column" ,justifyContent: "space-between"}}>
-                        <IconButton style={{position: "absolute"}} onClick={this.handleDrawerClose}>
+                    <List style={{ background: "#121212", position: "relative", height: "100vh", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                        <IconButton style={{ position: "absolute" }} onClick={this.handleDrawerClose}>
                             <img src={close} align="right" width="24px" alt="" />
                         </IconButton>
                         <Avatar>
@@ -87,13 +87,14 @@ export default class Double extends Component {
                         <div>
                             {
                                 items.map((item) => (
-                                    <ListItem key={item.path} onClick={this.handleDrawerClose} button >
-                                        <ItemHover>
+                                    <ItemHover>
+                                        <ListItem key={item.path} onClick={this.handleDrawerClose} button >
                                             <Link to={item.path} style={{ color: "#B5B5B5", fontFamily: "Exo, sans-serif", fontWeight: "600", fontSize: "18px" }}>
                                                 {item.title}
                                             </Link>
-                                        </ItemHover>
-                                    </ListItem>
+                                        </ListItem>
+                                    </ItemHover>
+
                                 ))
                             }
                         </div>
