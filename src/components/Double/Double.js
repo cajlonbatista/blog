@@ -76,7 +76,7 @@ export default class Double extends Component {
                 <SwipeableDrawer anchor="left" open={this.state.open} onOpen={this.handleDrawerOpen} onClose={this.handleDrawerClose}>
                     <List style={{ background: "#121212", position: "relative", height: "100vh", width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                         <IconButton style={{ position: "absolute" }} onClick={this.handleDrawerClose}>
-                            <img src={close} align="right" width="24px" alt="" />
+                            <img src={close} align="right" width="24px" alt="close" />
                         </IconButton>
                         <Avatar>
                             <div></div>
