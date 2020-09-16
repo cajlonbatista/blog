@@ -21,7 +21,7 @@ export const Avatar = styled.div`
         width: 170px;
         margin: 10px;
         height: 170px;
-        background: url("https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F118725697_640332243278368_7804395663473249528_n.jpg%3Foh%3Df586e79a615eca3694db3be0896e8ad3%26oe%3D5F661CD4&t=l&u=559988095963%40c.us&i=1598639151&n=DFMIRjWwbxg6C6DYjepGSlgEuNNaP1qUGCIxGbYDGkE%3D");
+        background: url("https://cdn.discordapp.com/avatars/736865755924004904/a_bc2f2e8db3953b1b584c2489b9d6c7d9.gif?size=128");
         overflow: hidden;
         position: relative;
         @media(max-width: 905px){
