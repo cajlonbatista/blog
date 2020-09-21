@@ -60,7 +60,6 @@ export const SoftCard = styled.div`
         font-family: Exo, sans-serif;
         color: #b5b5b5;
         transition: all 0.4s;
-        cursor: pointer;
         font-size: 17px;
     }
 `;

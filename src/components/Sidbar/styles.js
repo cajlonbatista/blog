@@ -40,7 +40,6 @@ export const Avatar = styled.div`
         transition: all 0.3s;
         text-align: center;
         margin-top: 7px;
-        cursor: pointer;
         :hover{
             color: #6092ff;
         }
@@ -54,7 +53,6 @@ export const Links = styled.div`
     justify-content: space-between;
     span{
         font-family: Exo, sans-serif;
-        cursor: pointer;
         margin-top: 10px;
         font-size: 19px;
         font-weight: 600;
