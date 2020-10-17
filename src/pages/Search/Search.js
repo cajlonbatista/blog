@@ -16,6 +16,8 @@ import { message } from 'antd';
 import { Link } from 'react-router-dom';
 import { BackTop } from "antd";
 
+import search from '../../assets/icons/search.svg';
+
 export default class Search extends Component {
     state = {
         data: [],
@@ -48,7 +50,7 @@ export default class Search extends Component {
                 <BackTop />
                 <SearchConteiner>
                     <Entry>
-                        <InputBase
+                        <input
                             placeholder="Procure um artigo"
                             onChange={async (e) => {
                                 await this.setState({
@@ -68,8 +70,8 @@ export default class Search extends Component {
                             }}
                             inputProps={{ 'aria-label': 'search google maps' }}
                         />
-                        <IconButton aria-label="search">
-                            <SearchIcon onClick={this.onSearch} />
+                        <IconButton aria-label="search" onClick={this.onSearch}>
+                            <img src={search}/>
                         </IconButton>
                     </Entry>
                     <div style={{display: this.state.status, marginBottom: 20, padding: 20 ,display: "flex", justifyContent: "flex-end", color: "white", fontFamily: "Exo, sans-serif", fontSize: 13}}>

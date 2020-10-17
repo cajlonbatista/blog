@@ -12,9 +12,28 @@ export const SearchConteiner = styled.div`
     }
 `;
 export const Entry = styled.div`
-    background: #F2F2F2;
+    background: #36393F;
     display: flex;
     justify-content: center;
+    align-items: center;
+    img{
+        width: 30px;
+    }
+    input{
+        width: 30%;
+        height: 40px;
+        border: 1px solid #6E6E6F;
+        border-radius: 5px;
+        font-family: Ubuntu;
+        background: #393C43;
+        color: #B5B5B5;
+        outline: none;
+        padding: 0px 10px;
+        transition: all 0.3s;
+        :focus{
+            border: 1px solid #6092ff;
+        }
+    }
 `;
 export const Exit = styled.div`
     display: grid;

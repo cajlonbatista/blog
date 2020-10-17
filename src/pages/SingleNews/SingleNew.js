@@ -105,6 +105,7 @@ export default class SingleNews extends Component {
                                     </svg>
                                 </Link>
                                 <span>{new Date(publishedAt).toDateString()}</span>
+                                <span>{title}</span>
                             </HeaderNews>
                             <ContentNews>
                                 <Markdown source={content}></Markdown>

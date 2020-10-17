@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const ConteinerNews = styled.div`
-    background: #202020;
+    background: #2F3136;
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     height: 100vh;
     overflow: auto;
@@ -43,20 +43,25 @@ export const NotConteiner = styled.div`
 
 export const HeaderNews = styled.div`
     display: flex;
-    background: #202020;
-    justify-content: space-around;
+    background: #202225;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border: 1px #333333 solid;
+    padding: 10px 40px;
     span{
         font-family: Exo, sans-serif;
         color: whitesmoke;
         font-size: 17px;
     }
+    span:last-child{
+        @media(max-width: 427px){
+            display: none;
+        }   
+    }
+    
 `;
 export const ContentNews = styled.div`
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 60px;
 
     h1{
         font-family: Archivo, sans-serif;
@@ -104,12 +109,15 @@ export const ContentNews = styled.div`
     }
     img{
         width: 100%;
-        max-width: 300px;
+        max-width: 600px;
         text-align: center;
         display: block;
         margin-left: auto;
         margin-right: auto
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
     }
-
+   
 `
 

@@ -2,13 +2,9 @@ import styled from 'styled-components';
 import avatar from "../../assets/images/avatar.gif"
 
 export const DoubleConteiner = styled.div`
-    background: #181818;
+    background: #2F3136;
     padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
+    width: 100vw;
     transition: all 0.4s;
     display: flex;
     justify-content: space-between;

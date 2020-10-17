@@ -53,6 +53,13 @@ export default class Feed extends Component {
                                     </Link>
                                 ))
                             }
+                            {
+                                this.state.data.docs.map(article => (
+                                    <Link to={`/article/${article._id}`} key={article._id}>
+                                        <CardNew data={article}></CardNew>
+                                    </Link>
+                                ))
+                            }
                         </LayoutNews>
                     </>
                 );

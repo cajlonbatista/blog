@@ -38,6 +38,7 @@ export const SkillCard = styled.div`
     background-size: cover;
     display: grid;
     padding: 20px;
+    justify-content: center;
     div{
         display: flex;
         justify-content: center;

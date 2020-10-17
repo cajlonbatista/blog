@@ -20,10 +20,11 @@ export const HeaderCard = styled.div`
     }
 `;
 export const CardConteiner = styled.div`
-    background: #202020;
+    background: #2F3136;
     padding: 20px;
     border: 2px solid #333333;
     transition: all 0.4s;
+    height: 100%;
     cursor: pointer;
     :hover{
         opacity: 0.87;
