@@ -21,8 +21,10 @@ export const Avatar = styled.div`
         border-radius: 100%;
         overflow: hidden;
         height: 100px;
-        width:100px;
+        width: 100px;
         background: black;
+        border: 1px solid transparent;
+        transition: all 0.4s;
         background: url(https://avatars2.githubusercontent.com/u/63024734?s=460&u=26e99e87bc36f43f10110ae256e1161e88a958df&v=4) no-repeat;
         background-size: cover;
         overflow: hidden;
@@ -31,6 +33,10 @@ export const Avatar = styled.div`
             width: 100px;
             height: 100px;
             background-position: 30px;
+        }
+        :hover{
+            border: 1px solid #73ffdd;
+            opacity: 0.7;
         }
     }
     @media(max-width: 905px){
@@ -61,7 +67,7 @@ export const Links = styled.div`
         border-bottom: 1px solid transparent;
         :hover{
             color: #73ffdd;
-            border-bottom: 1px solid #6092ff;
+            border-bottom: 1px solid #73ffdd;
         }
     }
 `;

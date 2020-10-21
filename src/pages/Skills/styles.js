@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SkillLayout = styled.div`
     height: 100vh;
-    background: #202020;
+    background: #000000;
     padding: 20px;
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     overflow: auto;
@@ -13,6 +13,7 @@ export const SkillLayout = styled.div`
         font-size: 28px;
         text-align: center;
         font-weight: 600;
+        color: #73ffdd;
     }
     a{
         font-size: 20px;
@@ -56,7 +57,7 @@ export const SkillCard = styled.div`
         background: #FFFFFF;
         border-radius: 5px;
     }
-    background: #202020;
+    background: #000000;
     grid-template-columns: repeat(auto-fit, min(100%, 90px));
     grid-gap: 10px;
     animation: bounce 2s linear;
@@ -65,7 +66,7 @@ export const SoftCard = styled.div`
     padding: 10px;
     div{
         :hover{
-            color: #6092ff;
+            color: #73ffdd;
         }
         font-family: Exo, sans-serif;
         color: #b5b5b5;

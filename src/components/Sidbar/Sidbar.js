@@ -35,7 +35,7 @@ export default function SidBar() {
                     menu.map(item => (
                         (location.pathname.includes(item.path))
                             ?
-                            <Link style={{ color: "#6092ff", marginTop: 10 }} to={item.path}><span>{item.title}</span></Link>
+                            <Link style={{ color: "#73ffdd", marginTop: 10 }} to={item.path}><span>{item.title}</span></Link>
                             :
                             <Link style={{ color: "#b5b5b5", marginTop: 10 }} to={item.path}><span>{item.title}</span></Link>
                     ))

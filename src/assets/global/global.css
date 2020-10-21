@@ -18,10 +18,10 @@ a{
     }
     ::-webkit-scrollbar {
         width: 5px;
-        background: #6092ff;
+        background: #73ffdd;
     }
     ::-webkit-scrollbar-thumb {
-        background: #6092ff;
+        background: #73ffdd;
         border-radius: 5px;
     }
 }
@@ -30,18 +30,18 @@ a{
     transition: all 0.4s;
 }
 #facebook:hover{
-    fill: #6092ff;
+    fill: #73ffdd;
     animation: graps 0.5s linear;
 }
 #close:hover{
-    fill: #6092ff;
+    fill: #73ffdd;
     animation: spin 1s linear;
 }
 #instagram{
     transition: all 0.4s;
 }
 #instagram:hover{
-    fill: #6092ff;
+    fill: #73ffdd;
     animation: graps 0.5s linear;
 
 }
@@ -49,7 +49,7 @@ a{
     transition: all 0.4s;
 }
 #github:hover{
-    fill: #6092ff;
+    fill: #73ffdd;
     animation: graps 0.5s linear;
 
 }
@@ -57,7 +57,7 @@ a{
     transition: all 0.4s;
 }
 #linkedin:hover{
-    fill: #6092ff;
+    fill: #73ffdd;
     animation: graps 0.5s linear;
 
 }
@@ -65,7 +65,7 @@ a{
     transition: all 0.4s;
 }
 #back:hover{
-    fill: #ff7948;
+    fill: #73ffdd;
     animation: graps 0.5s linear;
 }
 #search{
@@ -73,7 +73,7 @@ a{
 }
 #search:hover{
     transition: all 0.4s;
-    fill: #ff7948;
+    fill: #73ffdd;
     animation: graps 0.5s linear;
 }
 @keyframes fade-in {
