@@ -9,8 +9,14 @@ export const DoubleConteiner = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media(min-width: 905px){
-        display: none;
+    display: none;
+    position: fixed;
+    border: 2px solid #73ffdd;
+    background: black;
+    border-radius: 10px;
+    top: 0;
+    @media(max-width: 905px){
+        display: block;
     }
 `;
 export const Dualdor = styled.div`
@@ -23,7 +29,19 @@ export const Dualdor = styled.div`
 export const Toggle = styled.div`
     margin: 5px;
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
+    div:last-child{
+        border-radius: 100%;
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+        background: black;
+        background: url(https://avatars2.githubusercontent.com/u/63024734?s=460&u=26e99e87bc36f43f10110ae256e1161e88a958df&v=4) no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
 `;
 export const Avatar = styled.div`
     display: flex;

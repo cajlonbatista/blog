@@ -5,50 +5,42 @@ import {
     StickyBallLoading
 } from "react-loadingg";
 
-import dev from '../../assets/images/dev.svg';
+import back from '../../assets/images/aboutback.svg';
 
-const ContentAbout = styled.div`
+const ConteinerAbout = styled.div`
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    padding: 20px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: border 5s both infinite;
+    border: 2px solid transparent;
+    border-radius: 20px;
     p{
         font-size: 18px;
         font-family: Exo, sans-serif;
         text-align: justify;
         color: #B5B5B5;
         width: 100%;
+        transition: all 0.3s;
         max-width: 700px;
         margin: 0 auto;
-    }
-    a{
-        color: #6092ff;
-        text-decoration: underline;
-        width: 100%;
-        max-width: 700px;
-        margin: 0 auto;    }
-`;
-const ConteinerAbout = styled.div`
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    @media(max-width: 905px){
-        padding-top: 75px;
-        padding-left:  10px;
-        padding-right:  10px;
-    }
-    height: 100vh;
-    background-color: #2F3136;
-    overflow: auto ;
-    padding: 20px;
-    h1{
-        text-align: center;
-        width: 100%;
-        max-width: 700px;
-        margin: 0 auto;
+        padding: 10px 20px;
+        border-radius: 10px;
+        @media(max-width: 905px){
+            font-size: 14px;
+            text-align: center;
+        }
     }
     img{
-        margin: 0 auto;
-        width: 100%;
-        max-width: 500px;
+        width: 90%;
+        max-width: 400px;
     }
 `
 
@@ -76,12 +68,8 @@ export default class About extends React.Component {
         } else {
             return (
                 <ConteinerAbout>
-                    <h1 style={{ color: "#6092ff", fontFamily: "Poppins, sans serif", fontSize: 25 }}>Sobre Mim</h1>
-                    <br/>
-                    <ContentAbout>
-                        <p>Oi, meu nome é Francisco Cajlon, vivo em Caxias-MA e tenho 17 anos, estou cursando o 3º ano do Ensino Médio integrado ao curso de Técnico em Informática e atuando como FullStack Developer. <a href="https://www.google.com/search?q=IFMA+Campus+caxias&source=lmns&bih=657&biw=1366&hl=pt-BR&sa=X&ved=2ahUKEwiT5_egmuzrAhUjL7kGHZrrAJcQ_AUoAHoECAEQAA" target="_blank">IFMA Campus Caxias</a></p>
-                        <img src={dev} />
-                    </ContentAbout>
+                        <img src={back}/> 
+                        <p>Estudante cursando o 3º ano do Ensino Médio, atuando na área de tecnologia a 3 anos, atualmente estou no desenvolvimento web, e  participando projetos open-souce na Nova Crypt South Brazil</p>
                 </ConteinerAbout>
             );
         }

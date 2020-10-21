@@ -50,7 +50,7 @@ export default class SingleNews extends Component {
         if (this.state.loading) {
             return (
                 <div style={{ background: "#202020", overflow: "hidden", height: "100vh" }}>
-                    <SemipolarLoading></SemipolarLoading>
+                    <SemipolarLoading color='#73ffdd'></SemipolarLoading>
                 </div>
             );
         } else {

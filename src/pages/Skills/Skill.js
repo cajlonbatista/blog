@@ -38,7 +38,7 @@ export default class Skill extends Component {
         if (this.state.loading) {
             return(
                 <div style={{height: "100vh", background: "#202020" }}>
-                    <TouchBallLoading></TouchBallLoading>
+                    <TouchBallLoading color='#73ffdd'></TouchBallLoading>
                 </div>
             );
         } else {

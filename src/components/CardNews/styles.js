@@ -20,15 +20,14 @@ export const HeaderCard = styled.div`
     }
 `;
 export const CardConteiner = styled.div`
-    background: #2F3136;
+    background: black;
     padding: 20px;
     border: 2px solid #333333;
     transition: all 0.4s;
-    height: 100%;
     cursor: pointer;
     :hover{
         opacity: 0.87;
-        border: 2px solid #94cbfa;
+        border: 2px solid #73ffdd;
     }
 `;
 export const ContentCard = styled.div`

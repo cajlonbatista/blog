@@ -10,7 +10,7 @@ export const SkillLayout = styled.div`
     flex-direction: column;
     h3{
         font-family: Poppins, sans-serif;
-        font-size: 35px;
+        font-size: 28px;
         text-align: center;
         font-weight: 600;
     }
@@ -19,7 +19,7 @@ export const SkillLayout = styled.div`
         font-family: Exo, sans-serif; 
         padding: 18px;
         font-weight: 500;
-        color: #6092ff;
+        color: #73ffdd;
         :hover{
             text-decoration: underline;
         }
@@ -28,10 +28,19 @@ export const SkillLayout = styled.div`
         font-family: Poppins, sans-serif;
         font-size: 20px;
         font-weight: 600;
-        color: #6092ff;
+        color: #73ffdd;
     }
     @media(max-width: 905px){
-        padding-top: 79px;
+        padding-top: 100px;
+        h3{
+            font-size: 25px;
+        }
+        a{
+            font-size: 17px;
+        }
+        span{
+            font-size: 17px;
+        }
     }
 `; 
 export const SkillCard = styled.div`
@@ -44,7 +53,7 @@ export const SkillCard = styled.div`
         justify-content: center;
         padding: 10px 40px;
         height: 80px;
-        background: #f5f5f5;
+        background: #FFFFFF;
         border-radius: 5px;
     }
     background: #202020;

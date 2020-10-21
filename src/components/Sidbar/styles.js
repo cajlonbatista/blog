@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 export const LayoutSidBar = styled.div`
-    background: #202225;
+    background: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #B5B5B5;
     height: 100vh;
     padding: 20px 10px;
-    border-right: 7px solid #202225;
+    border-radius: 20px;
+    border: 2px solid #73ffdd;
     @media(max-width: 905px){
         display: none;
     }
@@ -59,7 +60,7 @@ export const Links = styled.div`
         transition: all 0.4s;
         border-bottom: 1px solid transparent;
         :hover{
-            color: #6092ff;
+            color: #73ffdd;
             border-bottom: 1px solid #6092ff;
         }
     }
