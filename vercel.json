@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "blog",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": "public"
+      }
+    }
+  ]
+}
