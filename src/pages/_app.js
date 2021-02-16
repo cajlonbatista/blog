@@ -1,12 +1,7 @@
-import GlobalStyle from '../global/global';
+import '../global/global.css';
 
 function App({ Component, pageProps }) {
-  return (
-    <div>
-      <GlobalStyle />
-      <Component {...pageProps} />
-    </div>
-  )
+  return <Component {...pageProps} />;
 }
 
 export default App;
