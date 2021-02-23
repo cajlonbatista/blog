@@ -8,7 +8,7 @@ export const IndexContainer = styled.main`
   width: 100vw;
   height: 100vh;
   display: grid;
-  background: #101010;
+  background: #0B0C10;
   grid-template-columns: 350px 1fr;
   animation-direction: alternate;
   overflow: hidden;
@@ -16,14 +16,22 @@ export const IndexContainer = styled.main`
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom right;
+  @media(max-width: 700px){
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+  }
   >div{
     padding: 20px;
     animation: ${content} 0.4s backwards;
     animation-delay: 0.4s;
+    @media(max-width: 600px){
+      padding: 20px 10px;
+    }
     >h1{
       font-family: Nunito, sans-serif;
       font-size: 20px;
-      color: #b8b7b9;
+      color: #C5C6C7;
       margin: 10px;
     }
   }
@@ -48,27 +56,25 @@ export const IndexContainer = styled.main`
       input{
         display: block;
         width: 100%;
-        height: 34px;
-        padding: 5px 30px 5px 10px;
+        height: 42px;
+        padding: 13px 30px 13px 14px;
         font-family: Inter, sans-serif;
         font-size: 13.5px;
         outline: none;
-        background: transparent;
-        color: #8F8E8F;
+        background: #1F2833;
+        color: #FFF;
         transition: all 0.3s;
-        border-left: 0;
-        border-top: 0;
-        border-right: 0;
-        border-bottom: 2px solid #8F8E8F;
-        :focus{
-          border-color: #8F8E8F;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        ::placeholder{
+          color: #C5C6C7;
         }
       }
       svg{
         position: absolute;
-        width: 22px;
-        top: 5px;
-        right: 10px;
+        width: 20px;
+        top: 10px;
+        right: 14px;
       }
     }
   }
@@ -78,7 +84,7 @@ export const IndexContainer = styled.main`
     grid-template-rows: 250px;
     article{
       padding: 20px;
-      background: #0A0A0A;
+      background: #1F2833;
       min-height: 100px;
       display: flex;
       flex-direction: column;
@@ -87,13 +93,14 @@ export const IndexContainer = styled.main`
       border: 2px solid transparent;
       transition: all 0.3s;
       position: relative;
+      cursor: pointer;
       overflow: hidden;
       border-radius: 10px;
       :hover{
         aside{
           background-color: #E6313120;
         }
-        border-color: #E6313120;
+        border-color: #45A29E;
       }
       header{
         width: 100%;
@@ -102,7 +109,7 @@ export const IndexContainer = styled.main`
         font-family: Inter, sans-serif;
         span:last-child{
           font-size: 13.2px;
-          color: #606060;
+          color: #C5C6C7;
         }
         span:first-child{
           padding: 5px 10px;
@@ -126,7 +133,7 @@ export const IndexContainer = styled.main`
       div:last-child{
         h1{
           font-family: Inter, sans-serif;
-          color: #b8b7b9;
+          color: #C5C6C7;
           font-weight: 500;
           font-size: 18px;
           border-bottom: 2px solid transparent;
@@ -140,7 +147,7 @@ export const IndexContainer = styled.main`
           font-size: 14px;
           text-align: justify;
           transition: all 0.4s;
-          color: #606060;
+          color: #C5C6C7;
           margin-bottom: 20px;
         }
       }
