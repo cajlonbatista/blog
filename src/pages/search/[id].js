@@ -32,8 +32,19 @@ const Post = ({ posts, tag }) => {
               onBlur={() => setActive(false)}
               style={{ borderBottomColor: active ? '#66FCF1' : 'transparent' }}
               value={search}
-              onKeyDown= {async e => {
-                if (e.keyCode === 13) {
+              onKeyDown={async e => {
+                var validate = '';
+                if (search != undefined) {
+                  for (const word of search) {
+                    if (word === '' || word === ' ') {
+                      validate += '';
+                    } else {
+                      validate = 'exacto';
+                      break;
+                    }
+                  }
+                }
+                if (e.keyCode === 13 && validate !== '' && search != undefined) {
                   setLoading(true);
                   await router.push(`/search/${search.toLocaleLowerCase()}`);
                   setLoading(false);
