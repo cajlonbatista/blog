@@ -6,7 +6,6 @@ export const HeaderContainer = styled.header`
   width: 100%;
   position: relative;
   overflow: hidden;
-  animation: ${inter} 0.6s backwards;
   padding: 50px 0px;
   display: flex;
   background: #1F2833;

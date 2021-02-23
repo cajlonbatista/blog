@@ -1,25 +1,23 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
+import React, { useState } from 'react';
 
 import axios from 'axios';
+import { useRouter } from 'next/router';
+
+import Header from '../../components/Header/Header';
+import SideBar from '../../components/SideBar/SideBar';
+
 import { SemipolarLoading } from 'react-loadingg';
-import Header from '../components/Header/Header';
-import SideBar from '../components/SideBar/SideBar';
 
-import { IndexContainer } from '../global/styles/index.styles';
+import { PostContainer } from '../../global/styles/post.[id].styles';
 
-const Home = ({ posts }) => {
-  const [search, setSearch] = useState('');
+const Post = ({ posts, tag }) => {
+  const router = useRouter();
+  const [search, setSearch] = useState(tag);
   const [active, setActive] = useState(false);
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
 
   return (
-    <IndexContainer>
-      <Head>
-        <title>Francisco Cajlon</title>
-      </Head>
+    <PostContainer>
       <SideBar />
       <Header />
       <div>
@@ -34,10 +32,11 @@ const Home = ({ posts }) => {
               onBlur={() => setActive(false)}
               style={{ borderBottomColor: active ? '#66FCF1' : 'transparent' }}
               value={search}
-              onKeyDown={e => {
+              onKeyDown= {async e => {
                 if (e.keyCode === 13) {
                   setLoading(true);
-                  router.push(`/search/${search}`);
+                  await router.push(`/search/${search.toLocaleLowerCase()}`);
+                  setLoading(false);
                 }
               }}
               onChange={e => setSearch(e.target.value)}
@@ -52,11 +51,11 @@ const Home = ({ posts }) => {
             </footer>
             :
             <>
-              <h1>Latest posts</h1>
+              <h1>{(posts !== undefined) ? (posts.length !== 0) ? 'Search results' : `We didn't find anything to '${tag}'` : 'Search results'}</h1>
               <main>
                 {
-                  !posts
-                    ? <SemipolarLoading color='#66FCF1' />
+                  posts === null || router.isFallback
+                    ? <SemipolarLoading />
                     :
                     posts.map(post => (
                       <article key={post._id} onClick={() => router.push(`/post/${post._id}`)}>
@@ -74,20 +73,38 @@ const Home = ({ posts }) => {
               </main>
             </>
         }
-
       </div>
-    </IndexContainer>
-  )
+    </PostContainer>
+  );
+};
+
+export default Post;
+
+export async function getStaticPaths() {
+  const data = await axios.get(`${process.env.API}api/articles`);
+
+  const paths = [];
+
+  for (const post of data.data.docs) {
+    for (const tag of post.tags) {
+      paths.push({ params: { id: tag } });
+    }
+  }
+
+  return {
+    paths: paths,
+    fallback: true,
+  }
 }
 
-export default Home;
-
-export async function getStaticProps() {
-  const data = await axios.get(`${process.env.API}api/articles`);
+export async function getStaticProps({ params }) {
+  const data = await axios.get(`${process.env.API}api/search/${params.id}`);
   return {
     props: {
-      posts: data.data.docs,
+      posts: data.data,
+      tag: params.id,
     },
     revalidate: 1,
   }
 }
+
