@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { jello, wooller } from '../../global/animations/animations';
+import { jello } from '../../global/animations/animations';
 
 export const HeaderContainer = styled.main`
   width: 100%;
@@ -7,6 +7,7 @@ export const HeaderContainer = styled.main`
   top: 0;
   display: none;
   min-height: 70px;
+  z-index: 999;
   background: #1F2833;
   padding: 10px;
   div:first-child{

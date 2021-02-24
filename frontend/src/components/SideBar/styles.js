@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { inter, jello } from '../../global/animations/animations';
+import { jello } from '../../global/animations/animations';
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -13,24 +13,27 @@ export const HeaderContainer = styled.header`
   flex-direction: column;    
   justify-content: space-between;  
   border-radius: 0px 50px 50px 0px;
+  border-right: 4px solid #45A29E;
   @media(max-width: 700px){
     display: none;
   }
   >div:first-child{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     z-index: 999;
-    align-items: flex-start;
+    align-items: center;
     h1{
       font-family: Nunito, sans-serif;
-      font-size: 20px;
+      font-size: 23px;
       color: #C5C6C7;
+      margin-top: 10px;
     }
     svg{
-      width: 45px;
+      width: 50px;
       stroke: #66FCF1;
-      margin-right: 10px;
+      cursor: pointer;
     }
   }
   a, span{
@@ -40,6 +43,8 @@ export const HeaderContainer = styled.header`
     font-family: Nunito, sans-serif;
     font-size: 14px;
     outline: none;
+    letter-spacing: 0.6px;
+    font-weight: 600;
   }
   >section{
     z-index: 999;

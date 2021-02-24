@@ -9,9 +9,9 @@ export const IndexContainer = styled.main`
   height: 100vh;
   display: grid;
   background: #0B0C10;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 260px 1fr;
   animation-direction: alternate;
-  overflow: hidden;
+  grid-template-rows: 100vh;
   background-image: url(${wave});
   background-size: 100%;
   background-repeat: no-repeat;
@@ -34,6 +34,11 @@ export const IndexContainer = styled.main`
       color: #C5C6C7;
       margin: 10px;
     }
+  }
+  >div{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
   }
   >div >div{
     display: flex;
@@ -80,14 +85,18 @@ export const IndexContainer = styled.main`
   }
   >div main:last-child{
     display: grid;
+    overflow: auto;
     grid-template-columns: repeat(auto-fit, min(100%, 500px));
     grid-template-rows: 250px;
+    justify-content: space-evenly;
+    grid-gap: 20px;
+    margin-top: 40px;
     article{
       padding: 20px;
       background: #1F2833;
-      min-height: 100px;
       display: flex;
       flex-direction: column;
+      min-height: 250px;
       justify-content: space-between;
       backdrop-filter: blur(20px);
       border: 2px solid transparent;

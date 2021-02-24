@@ -43,7 +43,7 @@ const twoclick = (
 const menu = [
   {
     path: '/',
-    title: 'Home',
+    title: 'Blog',
     active: onehome,
     inative: twohome,
   },

@@ -4,12 +4,12 @@ import { content } from '../animations/animations';
 
 import wave from '../assets/svg/wave.svg';
 
-export const PostContainer = styled.main`
+export const SearchContainer = styled.main`
   width: 100vw;
   height: 100vh;
   display: grid;
   background: #0B0C10;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 260px 1fr;
   animation-direction: alternate;
   overflow: hidden;
   background-image: url(${wave});
@@ -30,9 +30,15 @@ export const PostContainer = styled.main`
     >h1{
       font-family: Nunito, sans-serif;
       font-size: 20px;
+      text-align: center;
       color: #C5C6C7;
       margin: 10px;
     }
+  }
+  >div{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
   }
   >div >div{
     display: flex;
@@ -44,6 +50,7 @@ export const PostContainer = styled.main`
     h1{
       font-family: Nunito, sans-serif;
       color: #E5624D;
+      text-align: center;
     }
     div{
       display: flex;
@@ -79,14 +86,17 @@ export const PostContainer = styled.main`
   }
   >div main:last-child{
     display: grid;
+    justify-content: space-evenly;
     grid-template-columns: repeat(auto-fit, min(100%, 500px));
     grid-template-rows: 250px;
+    grid-gap: 10px;
     animation: ${content} 0.4s backwards;
+    margin-top: 40px;
     article{
       padding: 20px;
       background: #1F2833;
-      min-height: 100px;
       display: flex;
+      min-height: 250px;
       flex-direction: column;
       justify-content: space-between;
       backdrop-filter: blur(20px);

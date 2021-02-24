@@ -18,7 +18,7 @@ const Home = ({ posts }) => {
   return (
     <IndexContainer>
       <Head>
-        <title>Francisco Cajlon</title>
+        <title>Francisco Cajlon | Blog</title>
       </Head>
       <SideBar />
       <Header />

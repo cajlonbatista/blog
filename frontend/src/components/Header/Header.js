@@ -15,7 +15,6 @@ const Header = () => {
 
   const closeDrawer = () => setOpen(false);
 
-
   return (
     <HeaderContainer>
       <div>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
+import { SemipolarLoading } from 'react-loadingg';
 import Header from '../../components/Header/Header';
 import SideBar from '../../components/SideBar/SideBar';
 
-import { SemipolarLoading } from 'react-loadingg';
-
-import { PostContainer } from '../../global/styles/post.[id].styles';
+import { SearchContainer } from '../../global/styles/search.[id].styles';
 
 const Post = ({ posts, tag }) => {
   const router = useRouter();
@@ -17,13 +17,16 @@ const Post = ({ posts, tag }) => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <PostContainer>
+    <SearchContainer>
       <SideBar />
       <Header />
+      <Head>
+        <title>Francisco Cajlon | Blog</title>
+      </Head>
       <div>
         <div>
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill={active ? '#66FCF1' : '#C5C6C7'}>
+            <svg viewBox="0 0 20 20" fill={active ? '#66FCF1' : '#C5C6C7'}>
               <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
             </svg>
             <input
@@ -62,14 +65,20 @@ const Post = ({ posts, tag }) => {
             </footer>
             :
             <>
-              <h1>{(posts !== undefined) ? (posts.length !== 0) ? 'Search results' : `We didn't find anything to '${tag}'` : 'Search results'}</h1>
+              <h1>{
+                (posts !== undefined)
+                  ? (posts.length !== 0)
+                    ? 'Search results'
+                    : `We didn't find anything to '${tag}'`
+                  : 'Search results'}
+              </h1>
               <main>
                 {
                   posts === null || router.isFallback
                     ? <SemipolarLoading />
                     :
                     posts.map(post => (
-                      <article key={post._id} onClick={() => router.push(`/post/${post._id}`)}>
+                      <article key={post._id} onClick={() => router.push(`/post/${post._id.toLowerCase()}`)}>
                         <header>
                           <span>{post.card}</span>
                           <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
@@ -85,25 +94,15 @@ const Post = ({ posts, tag }) => {
             </>
         }
       </div>
-    </PostContainer>
+    </SearchContainer>
   );
 };
 
 export default Post;
 
 export async function getStaticPaths() {
-  const data = await axios.get(`${process.env.API}api/articles`);
-
-  const paths = [];
-
-  for (const post of data.data.docs) {
-    for (const tag of post.tags) {
-      paths.push({ params: { id: tag } });
-    }
-  }
-
   return {
-    paths: paths,
+    paths: [],
     fallback: true,
   }
 }
