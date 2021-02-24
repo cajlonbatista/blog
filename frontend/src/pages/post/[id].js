@@ -9,7 +9,9 @@ const Post = ({ }) => {
     <PostContainer>
       <Header />
       <SideBar />
-      
+      <main>
+        
+      </main>
     </PostContainer>
   );
 };

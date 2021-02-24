@@ -3,8 +3,9 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 import axios from 'axios';
-import { SemipolarLoading } from 'react-loadingg';
+
 import Header from '../components/Header/Header';
+import { SemipolarLoading } from 'react-loadingg';
 import SideBar from '../components/SideBar/SideBar';
 
 import { IndexContainer } from '../global/styles/index.styles';

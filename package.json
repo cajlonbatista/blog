@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon node ./src/server.js",
-    "start": "node ./src/server.js"
+    "dev": "nodemon node ./backend/src/server.js",
+    "start": "node ./backend/src/server.js"
   },
   "keywords": [],
   "author": "",
