@@ -8,12 +8,11 @@ export const HeaderContainer = styled.header`
   overflow: hidden;
   padding: 50px 0px;
   display: flex;
-  background: #1F2833;
+  background: #FF5252;
   backdrop-filter: sepia(90%);
   flex-direction: column;    
   justify-content: space-between;  
   border-radius: 0px 50px 50px 0px;
-  border-right: 4px solid #45A29E;
   @media(max-width: 700px){
     display: none;
   }
@@ -25,26 +24,26 @@ export const HeaderContainer = styled.header`
     z-index: 999;
     align-items: center;
     h1{
-      font-family: Nunito, sans-serif;
+      font-family: Inter, sans-serif;
       font-size: 23px;
-      color: #C5C6C7;
+      color: #FFF;
       margin-top: 10px;
     }
     svg{
-      width: 50px;
-      stroke: #66FCF1;
+      width: 70px;
+      stroke: #1F2833;
       cursor: pointer;
     }
   }
   a, span{
-    color: #C5C6C7;
+    color: #FFF;
     text-decoration: none;
     padding: 7px 0px;
-    font-family: Nunito, sans-serif;
-    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-size: 13.4px;
     outline: none;
     letter-spacing: 0.6px;
-    font-weight: 600;
+    font-weight: 400;
   }
   >section{
     z-index: 999;

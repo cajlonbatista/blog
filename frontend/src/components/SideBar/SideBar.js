@@ -22,10 +22,10 @@ const SideBar = () => {
           menu.map(item => (
             (item.path === router.pathname)
               ?
-              <div key={item.path} style={{ borderLeft: '2px solid #66FCF1' }}>
+              <div key={item.path} style={{ borderLeft: '2px solid #1F2833' }}>
                 {item.active}
                 <Link href={item.path}>
-                  <span style={{ color: '#66FCF1' }}>{item.title}</span>
+                  <span style={{ color: '#1F2833' }}>{item.title}</span>
                 </Link>
               </div>
               :

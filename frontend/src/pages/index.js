@@ -26,14 +26,14 @@ const Home = ({ posts }) => {
       <div>
         <div>
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill={active ? '#66FCF1' : '#C5C6C7'}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill={active ? '#FF5252' : '#C5C6C7'}>
               <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
             </svg>
             <input
               placeholder='Search posts'
               onFocus={() => setActive(true)}
               onBlur={() => setActive(false)}
-              style={{ borderBottomColor: active ? '#66FCF1' : 'transparent' }}
+              style={{ borderBottomColor: active ? '#FF5252' : 'transparent' }}
               value={search}
               onKeyDown={e => {
                 if (e.keyCode === 13) {

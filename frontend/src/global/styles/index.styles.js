@@ -8,11 +8,12 @@ export const IndexContainer = styled.main`
   width: 100vw;
   height: 100vh;
   display: grid;
-  background: #0B0C10;
+  background: #FFF;
   grid-template-columns: 260px 1fr;
   animation-direction: alternate;
   grid-template-rows: 100vh;
   background-image: url(${wave});
+  position: relative;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -31,7 +32,7 @@ export const IndexContainer = styled.main`
     >h1{
       font-family: Nunito, sans-serif;
       font-size: 20px;
-      color: #C5C6C7;
+      color: #FF5252;
       margin: 10px;
     }
   }
@@ -66,8 +67,8 @@ export const IndexContainer = styled.main`
         font-family: Inter, sans-serif;
         font-size: 13.5px;
         outline: none;
-        background: #1F2833;
-        color: #FFF;
+        background: #f5f5f5;
+        color: #FF5252;
         transition: all 0.3s;
         border: 2px solid transparent;
         border-radius: 5px;
@@ -93,7 +94,7 @@ export const IndexContainer = styled.main`
     margin-top: 40px;
     article{
       padding: 20px;
-      background: #1F2833;
+      background: #F5F5F5;
       display: flex;
       flex-direction: column;
       min-height: 250px;
@@ -118,14 +119,14 @@ export const IndexContainer = styled.main`
         font-family: Inter, sans-serif;
         span:last-child{
           font-size: 13.2px;
-          color: #C5C6C7;
+          color: #1F2833;
         }
         span:first-child{
           padding: 5px 10px;
           text-transform: uppercase;
           border-radius: 5px;
           font-size: 13.4px;
-          color: #f7951d;
+          color: #1F2833;
           font-weight: 700;
         }
       }
@@ -142,7 +143,7 @@ export const IndexContainer = styled.main`
       div:last-child{
         h1{
           font-family: Inter, sans-serif;
-          color: #C5C6C7;
+          color: #FF5252;
           font-weight: 500;
           font-size: 18px;
           border-bottom: 2px solid transparent;
@@ -156,7 +157,7 @@ export const IndexContainer = styled.main`
           font-size: 14px;
           text-align: justify;
           transition: all 0.4s;
-          color: #C5C6C7;
+          color: #1F2833;
           margin-bottom: 20px;
         }
       }

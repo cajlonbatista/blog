@@ -19,5 +19,15 @@ export const PostContainer = styled.main`
     flex-direction: column;
     padding-top: 80px;
   }
-
+  >main:last-child{
+    width: 100%;
+    max-width: 900px;
+    margin: 10px auto;
+    height: 100%;
+    background: #1F2833;
+    overflow: auto;
+    >div:last-child{
+      
+    }
+  }
 `;
